@@ -8,28 +8,23 @@ app = cvfy.register('nongh:0.0.0.0:1129210:5001:7002:0.0.0.0:5001')
 @app.listen()
 def grayscale():
 
-    all_image_paths = cvfy.getImageArray() 
+    images = cvfy.getImageArray() # From input image component
 
-    image_0_path = all_image_paths[0]
-    
-    #print image_0_path
+    image_i_path = images[0]
 
     cvfy.sendTextArrayToTerminal(['Loading Image...'])
-    image_0 = cv2.imread(image_0_path)
 
-    print type(image_0)
+    image_i = cv2.imread(image_i_path)
 
-    cvfy.sendTextArrayToTerminal(['Image Loaded successfully']);
+    #print type(image_i)
 
-    gray_image_0 = cv2.cvtColor(image_0, cv2.COLOR_BGR2GRAY)
+    gray_image_i = cv2.cvtColor(image_i, cv2.COLOR_BGR2GRAY)
 
-    cvfy.sendTextArrayToTerminal(['Converting RGB Image to Grayscale']);
+    cvfy.sendTextArrayToTerminal(['Converting RGB image to Grayscale.............']);
 
-    cvfy.sendImageArray([gray_image_0], mode = 'numpy_array')
+    cvfy.sendImageArray([gray_image_i], mode = 'numpy_array')
 
-    cvfy.sendTextArrayToTerminal([
-        'Operation completed successfully'
-        ]);
+    cvfy.sendTextArrayToTerminal(['Done!']);
 
     return 'OK'
 
