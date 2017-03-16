@@ -8,10 +8,10 @@ def runner():
 
 	cvfy.sendTextArrayToTerminal(['Fetching image........']);
 
-    cvfy.sendImageArray(['/home/alekhya/123.jpg'],mode ='file_path') # Hardcoded image
+	cvfy.sendImageArray(['/home/alekhya/123.jpg'],mode ='file_path') # Hardcoded image
 
-    cvfy.sendTextArrayToTerminal(['Done!']);
+	cvfy.sendTextArrayToTerminal(['Done!']);
     
-    return 'OK'
+	return 'OK'
 
 app.run()

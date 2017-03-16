@@ -12,7 +12,7 @@ def grayscale():
 
     image_i_path = images[0]
 
-    cvfy.sendTextArrayToTerminal(['Loading Image...'])
+    cvfy.sendTextArrayToTerminal(['Loading Image............'])
 
     image_i = cv2.imread(image_i_path)
 
